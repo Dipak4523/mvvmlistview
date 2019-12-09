@@ -52,4 +52,13 @@ class MainActivity : AppCompatActivity() {
         }
         request.add(requestJson)
     }
+    
+    private fun setAdapter(){
+     movieList = ArrayList<Movie>()
+        adapter = StudentAdapter(applicationContext, movieList)
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = adapter
+    }
 }
